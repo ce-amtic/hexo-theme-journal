@@ -100,6 +100,17 @@ sidebar_subtitle: "隻言片語<br>於此匯聚"
 
 > In `sidebar_title` and `sidebar_subtitle`, HTML is supported as the example above demonstrated.
 
+#### Nav Menu
+
+By default the nav menu contains: archives, RSS and all your *pages*. You can customize it by adding key-value pairs to `menu` property of the theme's config:
+
+```yaml
+menu:
+    Archive: /archives
+    Tags: /tags
+    About: /about
+```
+
 #### CDN
 
 By default it uses Baomitu's public CDN for libs and official Google Fonts. You can change the CDN used in the theme-level *_config.yml*.

@@ -5,6 +5,12 @@ truncate_len: 60
 
 rss: atom.xml
 
+# Customize the sidebar nav menu
+menu:
+    # Archive: /archives
+    # Tags: /tags
+    # About: /about
+
 cdn:
     # Support public CDN names: cdnjs, loli, baomitu, unpkg, jsdelivr
     libs: baomitu
