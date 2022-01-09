@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "npm run build",
-        "build": "node-sass source/scss/journal.scss -o source/css --output-style compressed && postcss source/css/journal.css -u autoprefixer -r",
+        "build": "node-sass source/scss/journal.scss --output-style compressed -o source/css && postcss source/css/journal.css -u autoprefixer -r --no-map",
         "watch": "node-sass -w source/scss -o source/css"
     },
     "repository": {
@@ -25,10 +25,10 @@
     "homepage": "https://github.com/SumiMakito/hexo-theme-journal/README.md",
     "devDependencies": {},
     "dependencies": {
-        "autoprefixer": "^9.2.0",
-        "node-sass": "^4.10.0",
-        "postcss": "^7.0.5",
-        "postcss-cli": "^6.0.0",
+        "autoprefixer": "^10.4.2",
+        "node-sass": "^7.0.1",
+        "postcss": "^8.4.5",
+        "postcss-cli": "^9.1.0",
         "scss-compile": "^0.1.7"
     }
 }
