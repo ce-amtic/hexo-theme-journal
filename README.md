@@ -195,7 +195,20 @@ When a page is created, its entry will automatically show up in the global navig
 
 #### Syntax highlighting
 
-The theme *Journal.* natively supports syntax highlighting. However, the plugin `hexo-prism-plugin` is required. You can install it by running `yarn add hexo-prism-plugin` or `npm i --save hexo-prism-plugin` **at your Hexo root directory**.
+The theme *Journal.* natively supports syntax highlighting. Set `highlight.hljs` to `true` and `highlight.wrap` and `highlight.line_number` to `false` and set a [highlight.js theme](https://github.com/highlightjs/highlight.js/tree/11.2.0/src/styles) ([demo](https://highlightjs.org/static/demo/)) for the theme:
+
+```yaml
+# In _config.yml
+highlight:
+    enable: true
+    line_number: false
+    wrap: false
+    hljs: true
+
+# In _config.journal.yml
+hljsTheme: github # Stands for highlight.js's builtin theme `github.css` (don't add `.css` suffix)
+                  # Or use a URL (starts with "/", "http:" or "https:")
+```
 
 #### Table of contents
 

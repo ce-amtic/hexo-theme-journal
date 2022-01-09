@@ -17,6 +17,8 @@ cdn:
     # The base URL of Google Fonts CDN (e.g. "https://fonts.loli.net")
     fonts: https://fonts.googleapis.com
 
+hljsTheme: github
+
 # Choose the comment service according to your need.
 # Please do not use the two services at the same time.
 livere: # [data-uid] for livere.com

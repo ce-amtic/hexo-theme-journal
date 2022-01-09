@@ -4,4 +4,7 @@
 <% if (theme.favicon || config.favicon){ %>
 <link rel="icon" href="<%- config.favicon ? config.favicon : theme.favicon %>">
 <% } %>
+<% if (theme.hljsTheme) { %>
+<link rel="stylesheet" href="<%= ["/", "http:", "https:"].some(s => theme.hljsTheme.startsWith(s)) ? theme.hljsTheme : (this.cdn.libs.css.hljs + theme.hljsTheme + this.cdn.libs.css.hljsSuffix) %>" crossorigin="anonymous">
+<% } %>
 <link rel="stylesheet" href="<%= this.cdn.fonts %>/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons">
