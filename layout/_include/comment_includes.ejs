@@ -28,4 +28,12 @@
         e.parentNode.insertBefore(j, e);
     })(document, 'script');
 </script>
+<% } else if(theme.giscus?.repo){ %>
+<script src="<%= theme.giscus.app || "https://giscus.app/client.js" %>"
+        <% for (const key of Object.keys(theme.giscus).filter(key => key !== "app")) { %>
+        data-<%= key %>="<%= String(theme.giscus[key]) %>"
+        <% } %>
+        crossorigin="anonymous"
+        async>
+</script>
 <% } %>

@@ -141,14 +141,28 @@ rss: atom
 
 #### Commenting
 
-The theme *Journal.* natively supports two commenting services – [Livere](https://www.livere.com/) and [Disqus](https://disqus.com/). To enable commenting, you just need to add **one of** the following lines to the *_config.yml* **in theme _Journal._'s directory**.
+The theme *Journal.* natively supports three commenting services – [Livere](https://www.livere.com/),  [Disqus](https://disqus.com/) and [Giscus](https://giscus.app/). To enable commenting, you just need to fill **one of** the following configuration items in the *_config.yml* **in theme _Journal._'s directory**.
 
 ```yaml
 livere: [data-uid] on livere.com
 disqus: [short_name] on disqus.com
+giscus:
+    # Use the official giscus app
+    app: https://giscus.app/client.js
+
+    # The options, see "Enable giscus" section in https://giscus.app/
+    repo: [ENTER REPO HERE]
+    repo-id: [ENTER REPO ID HERE]
+    category: [ENTER CATEGORY NAME HERE]
+    category-id: [ENTER CATEGORY ID HERE]
+    mapping: pathname
+    reactions-enabled: 1
+    emit-metadata: 0
+    theme: light
+    lang: en
 ```
 
-> If two fields are **both left non-empty**, two comment boxes will appear. To fix this, just leave one of the two fields empty.
+> If multiple fields are **left non-empty**, multiple comment boxes will appear. To fix this, just leave one of the fields empty.
 
 #### Disabling commenting
 

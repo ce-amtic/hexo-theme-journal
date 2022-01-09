@@ -15,3 +15,17 @@ cdn:
 # Please do not use the two services at the same time.
 livere: # [data-uid] for livere.com
 disqus: # [short_name] for disqus.com
+giscus:
+    # Use the official giscus app
+    app: https://giscus.app/client.js
+
+    # The options, see "Enable giscus" section in https://giscus.app/
+    repo: # [ENTER REPO HERE]
+    repo-id: # [ENTER REPO ID HERE]
+    category: # [ENTER CATEGORY NAME HERE]
+    category-id: # [ENTER CATEGORY ID HERE]
+    mapping: pathname
+    reactions-enabled: 1
+    emit-metadata: 0
+    theme: light
+    lang: en
