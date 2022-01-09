@@ -958,3 +958,27 @@ a {
     }
   }
 }
+
+.headerlink.processed {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+
+  &::before {
+    content: ' ';
+    visibility: hidden;
+  }
+
+  &::after {
+    content: '#';
+  }
+
+  &:not(:hover) {
+    color: #999;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &:hover > .headerlink.processed {
+    opacity: 1;
+  }
+}

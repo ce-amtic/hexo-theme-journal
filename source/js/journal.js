@@ -1,3 +1,13 @@
+// headerlink
+
+$("a.headerlink").each(function () {
+    var $a = $(this);
+    $a.addClass("processed");
+    var h = this.parentElement;
+    h.removeChild(this);
+    h.appendChild(this);
+});
+
 let app;
 
 app = new Vue({
