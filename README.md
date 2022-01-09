@@ -188,9 +188,9 @@ The theme *Journal.* natively supports syntax highlighting. However, the plugin 
 
 #### Table of contents
 
-With the plugin `hexo-toc`, the theme *Journal.* natively supports showing the table of contents in an article. You can install it by running `yarn add hexo-toc` or `npm i --save hexo-toc` **at your Hexo root directory**.
+The theme *Journal.* natively supports showing the table of contents in an article. You can add `toc: true` to the header of the post file to enable table of contents.
 
-Then, you can insert `<!-- toc -->` after the header of the post file to enable table of contents.
+You can also add `toc: true` in theme's config to enable ToC globally (and you disable ToC for individual article by adding `toc: false` to the header).
 
 ### Support the developer
 

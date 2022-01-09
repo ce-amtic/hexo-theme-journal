@@ -54,6 +54,7 @@ function getFeaturedImage() {
     
             <div class="post-body-wrapper">
                 <div class="post-body">
+                    <%- (page.toc ?? theme.toc) ? toc(page.content) : null %>
                     <%- page.content %>
                 </div>
             </div>
