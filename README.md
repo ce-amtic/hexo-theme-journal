@@ -100,6 +100,25 @@ sidebar_subtitle: "隻言片語<br>於此匯聚"
 
 > In `sidebar_title` and `sidebar_subtitle`, HTML is supported as the example above demonstrated.
 
+#### CDN
+
+By default it uses Baomitu's public CDN for libs and official Google Fonts. You can change the CDN used in the theme-level *_config.yml*.
+
+```yaml
+cdn:
+    # Support public CDN names: cdnjs, loli, baomitu, unpkg, jsdelivr
+    libs: baomitu
+    # Support custom mirrors: <type>:<base url> (type = cdnjs, unpkg)
+    libs: cdnjs:https://my-cdnjs-mirror.com
+    # Support specifying URL for each library (See `cdn.ejs`)
+    libs:
+        js: # ...
+        css: # ...
+
+    # The base URL of Google Fonts CDN (e.g. "https://fonts.loli.net")
+    fonts: https://fonts.googleapis.com
+```
+
 #### Archives
 
 By default, the 'Archives' entry will not appear in the navigation section. To show the 'Archives' in the navigation section, you will need to enable the archives explicitly in the theme-level *_config.yml*.

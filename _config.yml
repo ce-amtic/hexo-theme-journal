@@ -5,6 +5,12 @@ truncate_len: 60
 
 rss: atom.xml
 
+cdn:
+    # Support public CDN names: cdnjs, loli, baomitu, unpkg, jsdelivr
+    libs: baomitu
+    # The base URL of Google Fonts CDN (e.g. "https://fonts.loli.net")
+    fonts: https://fonts.googleapis.com
+
 # Choose the comment service according to your need.
 # Please do not use the two services at the same time.
 livere: # [data-uid] for livere.com
