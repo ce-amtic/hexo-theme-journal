@@ -1,3 +1,4 @@
+<% if (page.prev || page.next) { %>
 <nav class="post-pagination">
     <% if (page.prev) { %>
     <a class="newer-posts" href="<%- url_for(page.prev.path) %>">
@@ -11,3 +12,4 @@
     </a>
     <% } %>
 </nav>
+<% } %>
