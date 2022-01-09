@@ -23,25 +23,26 @@ First, `cd` into your Hexo root directory.
 
 ```bash
 yarn add hexo-renderer-ejs hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-index hexo-generator-tag
-# or `npm i --save hexo-renderer-ejs hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-index hexo-generator-tag` for npm users
 ```
 
 #### Cloning the theme
 
 ```bash
 cd themes
-git clone https://github.com/SumiMakito/hexo-theme-Journal.git journal
+git clone https://github.com/Menci/hexo-theme-journal.git journal
 cd journal
-yarn install # or `npm i` for npm users
+yarn install
 ```
 
 #### Applying the theme
 
-Find the _config.yml file at your Hexo root directory and apply the theme.
+Find the `_config.yml` file at your Hexo root directory and apply the theme.
 
 ```yaml
 theme: journal
 ```
+
+And create a `_config.journal.yml` file for the theme.
 
 ### User Guide
 
@@ -69,7 +70,7 @@ Maybe you've already noticed that there're two new fields named `intro` and `fea
 
 ##### Intro
 
-If `intro` is set, the value will be used as abstract instead of the automatically truncated one. Also, by editing the *_config.yml* in theme _Journal._'s directory, you are able to control the truncation length for all articles.
+If `intro` is set, the value will be used as abstract instead of the automatically truncated one. Also, by editing the `_config.journal.yml`, you are able to control the truncation length for all articles.
 
 ```yaml
 ...
@@ -91,7 +92,7 @@ The title area of the theme Journal. consists two parts — the title and the su
 
 <div align="center"><small>↑ An example of the title area ↑</small></div>
 
-Edit the *_config.yml* **in theme _Journal._'s directory**:
+Edit the `_config.journal.yml` file:
 
 ```yaml
 sidebar_title: "Journal."
@@ -113,7 +114,7 @@ menu:
 
 #### CDN
 
-By default it uses Baomitu's public CDN for libs and official Google Fonts. You can change the CDN used in the theme-level *_config.yml*.
+By default it uses Baomitu's public CDN for libs and official Google Fonts. You can change the CDN used in the `_config.journal.yml` file.
 
 ```yaml
 cdn:
@@ -132,7 +133,7 @@ cdn:
 
 #### Archives
 
-By default, the 'Archives' entry will not appear in the navigation section. To show the 'Archives' in the navigation section, you will need to enable the archives explicitly in the theme-level *_config.yml*.
+By default, the 'Archives' entry will not appear in the navigation section. To show the 'Archives' in the navigation section, you will need to enable the archives explicitly in the `_config.journal.yml` file.
 
 ```yaml
 archives: true
@@ -142,7 +143,7 @@ archives: true
 
 #### RSS
 
-By adding the following line to the *_config.yml* in theme _Journal._'s directory, an RSS entry will show up in the navigation drawer which points to the location specified.
+By adding the following line to the `_config.journal.yml`, an RSS entry will show up in the navigation drawer which points to the location specified.
 
 ```yaml
 rss: atom
@@ -152,7 +153,7 @@ rss: atom
 
 #### Commenting
 
-The theme *Journal.* natively supports three commenting services – [Livere](https://www.livere.com/),  [Disqus](https://disqus.com/) and [Giscus](https://giscus.app/). To enable commenting, you just need to fill **one of** the following configuration items in the *_config.yml* **in theme _Journal._'s directory**.
+The theme *Journal.* natively supports three commenting services – [Livere](https://www.livere.com/),  [Disqus](https://disqus.com/) and [Giscus](https://giscus.app/). To enable commenting, you just need to fill **one of** the following configuration items in the `_config.journal.yml` file.
 
 ```yaml
 livere: [data-uid] on livere.com
