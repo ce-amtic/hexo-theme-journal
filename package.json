@@ -4,9 +4,10 @@
     "description": "Moments got piled up.",
     "main": "index.js",
     "scripts": {
-        "test": "npm run build",
-        "build": "node-sass source/scss/journal.scss --output-style compressed -o source/css && postcss source/css/journal.css -u autoprefixer -r --no-map",
-        "watch": "node-sass -w source/scss -o source/css"
+        "test": "yarn build",
+        "build:css": "node-sass source/scss/journal.scss --output-style compressed -o source/css && postcss source/css/journal.css -u autoprefixer -r --no-map",
+        "build:js": "swc -q source/js/journal.js | terser --compress --mangle --toplevel > source/js/journal.min.js",
+        "build": "yarn build:css && yarn build:js"
     },
     "repository": {
         "type": "git",
@@ -23,12 +24,14 @@
         "url": "https://github.com/SumiMakito/hexo-theme-journal/issues"
     },
     "homepage": "https://github.com/SumiMakito/hexo-theme-journal/README.md",
-    "devDependencies": {},
-    "dependencies": {
+    "devDependencies": {
+        "@swc/cli": "^0.1.55",
+        "@swc/core": "^1.2.127",
         "autoprefixer": "^10.4.2",
         "node-sass": "^7.0.1",
         "postcss": "^8.4.5",
         "postcss-cli": "^9.1.0",
-        "scss-compile": "^0.1.7"
+        "scss-compile": "^0.1.7",
+        "terser": "^5.10.0"
     }
 }
