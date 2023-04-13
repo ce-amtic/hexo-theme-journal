@@ -9,6 +9,7 @@ favicon: /img/favicon.ico
 
 # Customize the sidebar nav menu
 menu:
+    Search: /search
     Archive: /archives
     Tags: /tags
     About: /about

@@ -223,6 +223,33 @@ You can also add `toc: true` in theme's config to enable ToC globally (and you d
 
 The theme *Journal.* natively support latex math formulas. Use `math: true` to enable mathjax.js.
 
+#### Search
+
+The theme *Journal.* natively supports local search engine based on [hexo-generator-searchdb](https://github.com/next-theme/hexo-generator-searchdb). To enable this feature, follow the steps:
+
+1. install hexo-generator-searchdb via npm `npm install hexo-generator-searchdb --save`
+
+2. Add this config in `hexo/_config.yml`
+
+```
+search:
+  path: search.xml      # default output path
+  top_n_per_article: 2  # show how many matches per article
+```
+
+3. Add a search page via hexo to use specific layout
+
+```
+hexo new page search
+```
+
+```
+// search/index.md
+layout: "search"
+```
+
+4. Link the page to your side NavBar
+
 ### Support the developer
 
 If you find my work awesome and useful, please consider donating. It is your support that helps me to do better!

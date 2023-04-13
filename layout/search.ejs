@@ -1,0 +1,79 @@
+<%- include("_include/variables.ejs") %>
+<% config.__title = __('Search') + " - " + config.title 
+%>
+<%- include("_include/head.ejs") %>
+<%- include("_include/container_head.ejs") %>
+<%- include("_include/single_column_head.ejs") %>
+<%- include("_include/side_nav.ejs") %>
+<%- include("_include/extra_nav.ejs") %>
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post-item-wrapper post-item-wrapper-no-hover">
+            <div class="post-item post-item-no-gaps">
+                <div class="post-item-info-wrapper">
+                    <input autocomplete="on" autocapitalize="off"
+                           placeholder="Type something to start searching..." spellcheck="false"
+                           type="search" class="post-item-searchbox">
+                </div>
+            </div>
+        </div>
+        <div class="post-item-wrapper post-item-wrapper-no-hover">
+            <div class="post-item post-item-no-gaps">
+                <div class="search-result-wrapper no-result">
+                    No Result
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="<%= config.root + 'js/search.js' %>"></script>
+<script> 
+// use js to define <input> behaviors
+document.addEventListener('DOMContentLoaded', () => {
+    console.log(parseInt("<%= config.search.top_n_per_article %>"));
+    const localSearch = new LocalSearch({
+        path             : "<%= config.root + config.search.path %>",
+        top_n_per_article: parseInt("<%= config.search.top_n_per_article %>"),
+        unescape         : false
+    });
+    localSearch.fetchData();
+    const input = document.querySelector('.post-item-searchbox');
+    const inputEventFunction = () => {
+        if (!localSearch.isfetched) return;
+        const searchText = input.value.trim().toLowerCase();
+        const keywords = searchText.split(/[-\s]+/);
+        const container = document.querySelector('.search-result-wrapper');
+        let resultItems = [];
+        if (searchText.length > 0) { // Perform local searching
+            resultItems = localSearch.getResultItems(keywords);
+        }
+
+        if (keywords.length === 1 && keywords[0] === '') {
+            container.classList.add('no-result');
+            container.innerHTML = 'No Result';
+        } else if (resultItems.length === 0) {
+            container.classList.add('no-result');
+            container.innerHTML = 'No Result';
+        } else {
+            resultItems.sort((left, right) => {
+                if (left.includedCount !== right.includedCount) {
+                    return right.includedCount - left.includedCount;
+                } else if (left.hitCount !== right.hitCount) {
+                    return right.hitCount - left.hitCount;
+                }
+                return right.id - left.id;
+            });
+            container.classList.remove('no-result');
+            container.innerHTML = `
+            <ul class="search-result-list">${resultItems.map(result => result.item).join('')}</ul>`;
+            if (typeof pjax === 'object') pjax.refresh(container);
+        }
+    }      
+    input.addEventListener('input', inputEventFunction);
+})
+</script>
+
+<%- include("_include/container_tail.ejs") %>
+<%- include("_include/tail.ejs") %>
