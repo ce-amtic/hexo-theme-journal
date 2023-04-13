@@ -1,9 +1,11 @@
-sidebar_title: "Journal."
+sidebar_title: "ce-amtic's."
 sidebar_subtitle: "隻言片語<br>於此匯聚"
 
 truncate_len: 200
 
 rss: atom.xml
+
+favicon: /img/favicon.ico
 
 # Customize the sidebar nav menu
 menu:
@@ -23,7 +25,7 @@ hljsTheme: atom-one-light
 # Choose the comment service according to your need.
 # Please do not use the two services at the same time.
 livere: # [data-uid] for livere.com
-disqus: # [short_name] for disqus.com
+disqus: cablogs-1 # [short_name] for disqus.com
 giscus:
     # Use the official giscus app
     app: https://giscus.app/client.js
