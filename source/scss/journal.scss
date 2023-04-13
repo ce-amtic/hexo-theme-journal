@@ -40,6 +40,8 @@ $toc-size: 16px;
 $dark-accent: darken($color-accent, 10%);
 $deep-dark-accent: darken($color-accent, 50%);
 $color-text: $deep-dark-accent;
+$color-title: darken($color-accent, 15%);
+$color-subtitle: desaturate($color-accent, 50%);
 
 @if lightness($color-accent) <10% {
   $dark-accent: $color-accent;
@@ -398,13 +400,14 @@ a {
     cursor: pointer;
     margin-bottom: 10px;
     transition: all 0.2s linear;
-    color: $deep-dark-accent;
     .nav-title {
+      color: $color-title;
       font-size: $nav-title-size;
       line-height: $nav-title-size * 1.4;
     }
     border-right: 2px solid transparent;
     .nav-subtitle {
+      color: $color-subtitle;
       margin-top: 8px;
       font-size: $nav-subtitle-size;
     }
@@ -844,6 +847,7 @@ a {
           &,
           * {
             list-style: none;
+            color: $color-title;
             font-size: $toc-size;
           }
           ul {
@@ -853,6 +857,7 @@ a {
           @media screen and (max-width: $single-column-max-width) {
             &,
             * {
+              color: $color-title;
               font-size: $single-column-toc-size;
             }
           }

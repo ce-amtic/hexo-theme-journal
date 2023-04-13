@@ -112,6 +112,8 @@ menu:
     About: /about
 ```
 
+Use `layout: "tag-index"` in `hexo/source/tags/index.md` to create a `tags` page.
+
 #### CDN
 
 By default it uses Baomitu's public CDN for libs and official Google Fonts. You can change the CDN used in the `_config.journal.yml` file.

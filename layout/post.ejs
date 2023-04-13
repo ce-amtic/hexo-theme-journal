@@ -19,7 +19,7 @@ function getFeaturedImage() {
     var featuredImage = page.featured_image;
     if (!featuredImage) return '';
     if (featuredImage.startsWith("http://") || featuredImage.startsWith("https://")) return featuredImage;
-    return config.root + page.path + featuredImage;
+    return config.root + featuredImage;
 }
 %>
 
