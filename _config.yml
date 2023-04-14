@@ -1,5 +1,5 @@
 sidebar_title: "ce-amtic's."
-sidebar_subtitle: "隻言片語<br>於此匯聚"
+sidebar_subtitle: "眩しくて、知らなくて、<br>恐ろしくて ..."
 
 truncate_len: 200
 
@@ -10,15 +10,16 @@ favicon: /img/favicon.ico
 # Customize the sidebar nav menu
 menu:
     Search: /search
-    Archive: /archives
+    Categories: /categories
     Tags: /tags
+    Archive: /archives
     About: /about
 
 cdn:
     # Support public CDN names: cdnjs, loli, baomitu, unpkg, jsdelivr
     libs: cdnjs
-    # The base URL of Google Fonts CDN (e.g. "https://fonts.loli.net")
-    fonts: https://fonts.googleapis.com
+    # The base URL of Google Fonts CDN (e.g. "https://fonts.loli.net" "https://fonts.googleapis.com")
+    fonts: https://fonts.loli.net
 
 hljsTheme: atom-one-light
 
@@ -31,10 +32,10 @@ giscus:
     app: https://giscus.app/client.js
 
     # The options, see "Enable giscus" section in https://giscus.app/
-    repo: # [ENTER REPO HERE]
-    repo-id: # [ENTER REPO ID HERE]
-    category: # [ENTER CATEGORY NAME HERE]
-    category-id: # [ENTER CATEGORY ID HERE]
+    repo: ce-amtic/ce-amtic.github.io # [ENTER REPO HERE]
+    repo-id: MDEwOlJlcG9zaXRvcnkxNjgzNTYwMTE= # [ENTER REPO ID HERE]
+    category: General # [ENTER CATEGORY NAME HERE]
+    category-id: DIC_kwDOCgjoq84CVvut # [ENTER CATEGORY ID HERE]
     mapping: pathname
     reactions-enabled: 1
     emit-metadata: 0
