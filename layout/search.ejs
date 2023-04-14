@@ -26,13 +26,15 @@
             </div>
         </div>
     </div>
+    <%- include("_include/pagination.ejs") %>
+    
+    <%- include("_include/single_column_footer.ejs") %>
 </div>
 
 <script type="text/javascript" src="<%= config.root + 'js/search.js' %>"></script>
 <script> 
 // use js to define <input> behaviors
 document.addEventListener('DOMContentLoaded', () => {
-    console.log(parseInt("<%= config.search.top_n_per_article %>"));
     const localSearch = new LocalSearch({
         path             : "<%= config.root + config.search.path %>",
         top_n_per_article: parseInt("<%= config.search.top_n_per_article %>"),

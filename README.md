@@ -219,7 +219,7 @@ The theme *Journal.* natively supports showing the table of contents in an artic
 
 You can also add `toc: true` in theme's config to enable ToC globally (and you disable ToC for individual article by adding `toc: false` to the header).
 
-### Math
+#### Math
 
 The theme *Journal.* natively support latex math formulas. Use `math: true` to enable mathjax.js.
 
@@ -249,6 +249,14 @@ layout: "search"
 ```
 
 4. Link the page to your side NavBar
+
+```
+menu:
+    Archive: /archives
+    Tags: /tags
+    About: /about
+    Search: /Search
+```
 
 ### Support the developer
 
