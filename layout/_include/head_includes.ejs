@@ -7,4 +7,5 @@
 <% if (theme.hljsTheme) { %>
 <link rel="stylesheet" href="<%= ["/", "http:", "https:"].some(s => theme.hljsTheme.startsWith(s)) ? theme.hljsTheme : (this.cdn.libs.css.hljs + theme.hljsTheme + this.cdn.libs.css.hljsSuffix) %>" crossorigin="anonymous">
 <% } %>
-<link rel="stylesheet" href="<%= this.cdn.fonts %>/css?family=Noto+Serif|Noto+Serif+SC|Fira+Code|Montserrat|Material+Icons">
+<link rel="stylesheet" href="<%= this.cdn.fonts %>/css?family=Noto+Serif|Noto+Serif+SC|Fira+Code|Montserrat">
+<link rel="stylesheet" href="<%= this.cdn.fonts %>/icon?family=Material+Icons">
