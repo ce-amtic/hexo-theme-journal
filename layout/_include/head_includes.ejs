@@ -5,7 +5,8 @@
 <link rel="icon" href="<%- config.favicon ? config.favicon : theme.favicon %>">
 <% } %>
 <% if (theme.hljsTheme) { %>
-<link rel="stylesheet" href="<%= ["/", "http:", "https:"].some(s => theme.hljsTheme.startsWith(s)) ? theme.hljsTheme : (this.cdn.libs.css.hljs + theme.hljsTheme + this.cdn.libs.css.hljsSuffix) %>" crossorigin="anonymous">
+<link id="hljsThemeLight" rel="stylesheet" href="<%= ["/", "http:", "https:"].some(s => theme.hljsTheme.light.startsWith(s)) ? theme.hljsTheme.light : (this.cdn.libs.css.hljs + theme.hljsTheme.light + this.cdn.libs.css.hljsSuffix) %>" crossorigin="anonymous">
+<link disabled id="hljsThemeDark" rel="stylesheet" href="<%= ["/", "http:", "https:"].some(s => theme.hljsTheme.dark.startsWith(s)) ? theme.hljsTheme.dark : (this.cdn.libs.css.hljs + theme.hljsTheme.dark + this.cdn.libs.css.hljsSuffix) %>" crossorigin="anonymous">
 <% } %>
 <link rel="stylesheet" href="<%= this.cdn.fonts %>/css?family=Noto+Serif|Noto+Serif+SC|Fira+Code|Montserrat">
 <link rel="stylesheet" href="<%= this.cdn.fonts %>/icon?family=Material+Icons">

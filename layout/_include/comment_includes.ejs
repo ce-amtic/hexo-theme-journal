@@ -29,10 +29,15 @@
     })(document, 'script');
 </script>
 <% } else if(theme.giscus?.repo){ %>
-<script src="<%= theme.giscus.app || "https://giscus.app/client.js" %>"
+<script id="myGiscusApp"></script>
+<script data-theme="preferred_color_scheme"
+        src="<%= theme.giscus.app || "https://giscus.app/client.js" %>"
         <% for (const key of Object.keys(theme.giscus).filter(key => key !== "app")) { %>
         data-<%= key %>="<%= String(theme.giscus[key]) %>"
         <% } %>
+        data-input-position="top"
+        data-strict="1"
+        data-loading="lazy"
         crossorigin="anonymous"
         async>
 </script>

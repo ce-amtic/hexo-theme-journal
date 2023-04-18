@@ -21,7 +21,9 @@ cdn:
     # The base URL of Google Fonts CDN (e.g. "https://fonts.loli.net" "https://fonts.googleapis.com")
     fonts: https://fonts.loli.net
 
-hljsTheme: atom-one-light
+hljsTheme: 
+    light: atom-one-light
+    dark: atom-one-dark
 
 # Choose the comment service according to your need.
 # Please do not use the two services at the same time.
