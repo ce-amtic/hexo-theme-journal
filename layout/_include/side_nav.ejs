@@ -40,11 +40,11 @@
 
     <% // Please keep the section below and do not make modifications. //  %>
     <div class="nav-footer">
-        <!--button class="nav-footer-button" type="button" v-if="localStorage.theme === 'dark'" v-on:click="toggleDark">
-            Light Mode
+        <!--button class="nav-footer-button" type="button" v-if="window.matchMedia('(prefers-color-scheme: dark)').matches">
+            <i class="material-icons footer-button">dark_mode</i>
         </button>
-        <button class="nav-footer-button" type="button" v-else v-on:click="toggleDark">
-            Dark Mode
+        <button class="nav-footer-button" type="button" v-else>
+            <i class="material-icons footer-button">light_mode</i>
         </button><br-->
         Built with <a href="https://hexo.io/" target="_blank">Hexo</a><br>
         <%# Please keep the section below and do not make modifications. %>
