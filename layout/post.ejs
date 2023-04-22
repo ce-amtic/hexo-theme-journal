@@ -12,7 +12,9 @@ config.__noPager = true
 <%- include("_include/single_column_head.ejs") %>
 <%- include("_include/side_nav.ejs") %>
 <%- include("_include/extra_nav.ejs") %>
-<%- include("_include/mathjax.ejs") %>
+<% if (page.math) { %>
+    <%- include("_include/mathjax.ejs") %>
+<% } %>
 
 <%
 function getFeaturedImage() {
